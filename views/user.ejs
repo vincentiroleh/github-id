@@ -1,0 +1,37 @@
+<%- include('partials/header') -%>
+
+<main class="text-center">
+  <section>
+    <h2>
+      <span class="bg-dark text-light"><%= info.login %></span> is GitHub user
+      <span class="bg-dark text-light">#<%= info.id %></span>
+    </h2>
+
+    <p class="mt-5">
+      You joined GitHub the year
+      <span class="bg-dark text-light">
+        <%= new Date(info.created_at).getFullYear() %>
+      </span>
+    </p>
+  </section>
+
+  <section>
+    <a
+      href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+      class="twitter-share-button"
+      data-size="large"
+      data-text="Hey, #techtwitter, I just find my GitHub user ID #<%= info.id %> . Find yours now!!"
+      data-url="https://yourgithub-id.herokuapp.com"
+      data-via="IrolehVincent"
+      data-show-count="false"
+      >Tweet</a
+    >
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+  </section>
+</main>
+
+<%- include('partials/footer') -%>

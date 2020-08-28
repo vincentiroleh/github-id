@@ -1,0 +1,36 @@
+<%- include('partials/header') -%>
+
+<main class="text-center">
+  <section>
+    <h2>Find GitHub User ID</h2>
+  </section>
+
+  <section class="mt-5">
+    <form action="/" method="POST">
+      <input
+        type="text"
+        name="username"
+        placeholder="GitHub Username"
+        required
+        trim
+        class="btn btn-outline-success"
+      />
+      <input
+        type="submit"
+        value="Find ID →"
+        class="btn btn-success"
+        id="submitBtn"
+      />
+    </form>
+  </section>
+</main>
+
+<script>
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.addEventListener("click", () => {
+    submitBtn.value = 'Finding →'
+    console.log(submitBtn.value);
+  });
+</script>
+
+<%- include('partials/footer') -%>
